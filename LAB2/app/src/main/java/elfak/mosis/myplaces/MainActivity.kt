@@ -49,7 +49,10 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.action_show_map -> Toast.makeText(this, "Show Map!", Toast.LENGTH_SHORT).show()
             R.id.action_new_place -> Toast.makeText(this, "New Place!", Toast.LENGTH_SHORT).show()
-            R.id.action_my_places_list -> Toast.makeText(this, "My Places List!", Toast.LENGTH_SHORT).show()
+            R.id.action_my_places_list -> {
+                val i: Intent = Intent(this, MyPlacesList::class.java)
+                startActivity(i)
+            }
             R.id.action_about -> {
                 val i: Intent = Intent(this, About::class.java)
                 startActivity(i)
