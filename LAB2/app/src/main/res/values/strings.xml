@@ -14,5 +14,6 @@
     <string name="my_places_list">My Places</string>
     <string name="about">About</string>
 
+    <string name="about_text">Lorem ipsum dolor sit amet...</string>
 
 </resources>

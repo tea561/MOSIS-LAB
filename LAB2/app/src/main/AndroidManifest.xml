@@ -20,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".About" android:label="About"
+          android:theme="@style/Theme.AppCompat.Light.Dialog"  />
     </application>
 
 </manifest>
