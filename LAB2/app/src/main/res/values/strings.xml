@@ -17,4 +17,11 @@
     <string name="about_text">Lorem ipsum dolor sit amet...</string>
     <string name="title_activity_my_places_list">MyPlacesList</string>
 
+    <string-array name="myplaces">
+        <item>Tvrdjava</item>
+        <item>Cair</item>
+        <item>Park Svetog Save</item>
+        <item>Trg kralja Milana</item>
+    </string-array>
+
 </resources>
