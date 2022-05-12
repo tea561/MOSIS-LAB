@@ -4,6 +4,7 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">My Places</string>
+    <string name="edit_fragment_label">Edit Place</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -16,5 +17,10 @@
     <string name="ok">Ok</string>
     <string name="about_text">Lorem ipsum dolor sit amet...</string>
     <string name="title_activity_my_places_list">MyPlacesList</string>
+    <string name="editmyplace_desc_label">Description</string>
+    <string name="editmyplace_add_label">Add</string>
+    <string name="editmyplace_cancel_label">Cancel</string>
+    <string name="editmyplace_name_label">Name</string>
+
 
 </resources>
