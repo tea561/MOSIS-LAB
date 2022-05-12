@@ -2,8 +2,8 @@
     <string name="app_name">My Places</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Home</string>
+    <string name="second_fragment_label">My Places</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -16,12 +16,5 @@
     <string name="ok">Ok</string>
     <string name="about_text">Lorem ipsum dolor sit amet...</string>
     <string name="title_activity_my_places_list">MyPlacesList</string>
-
-    <string-array name="myplaces">
-        <item>Tvrdjava</item>
-        <item>Cair</item>
-        <item>Park Svetog Save</item>
-        <item>Trg kralja Milana</item>
-    </string-array>
 
 </resources>

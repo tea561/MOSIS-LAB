@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPlaces">
-        <activity
+        <!--<activity
             android:name=".MyPlacesList"
             android:exported="false"
             android:label="@string/title_activity_my_places_list"
             android:theme="@style/Theme.MyPlaces.NoActionBar"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity" />-->
         <activity
             android:name=".MainActivity"
             android:exported="true"
