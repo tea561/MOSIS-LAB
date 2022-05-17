@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/First2Fragment"
         android:name="elfak.mosis.myplaces.First2Fragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_first2">
 
         <action
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/Second2Fragment"
         android:name="elfak.mosis.myplaces.Second2Fragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/list_fragment_label"
         tools:layout="@layout/fragment_second2">
 
         <action
