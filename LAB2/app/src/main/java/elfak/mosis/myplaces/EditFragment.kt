@@ -1,6 +1,8 @@
 package elfak.mosis.myplaces
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
 import android.widget.Button
 import android.widget.EditText
@@ -53,9 +55,22 @@ class EditFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val editName: EditText = requireView().findViewById<EditText>(R.id.editmyplace_name_edit)
         val addButton: Button = requireView().findViewById<Button>(R.id.editmyplace_finished_button)
+        addButton.isEnabled = false
+        editName.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                addButton.isEnabled = (editName.text.length > 0)
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+        })
         addButton.setOnClickListener{
-            val editName: EditText = requireView().findViewById<EditText>(R.id.editmyplace_name_edit)
             val name: String = editName.text.toString()
             val editDesc: EditText = requireView().findViewById<EditText>(R.id.editmyplace_desc_edit)
             val desc: String = editDesc.text.toString()

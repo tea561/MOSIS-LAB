@@ -21,6 +21,8 @@
     <string name="editmyplace_add_label">Add</string>
     <string name="editmyplace_cancel_label">Cancel</string>
     <string name="editmyplace_name_label">Name</string>
+    <string name="viewmyplace_finished_label">Close</string>
+    <string name="view_fragment_label">View My Place</string>
 
 
 </resources>

@@ -8,4 +8,5 @@ class MyPlacesViewModel : ViewModel() {
     fun addPlace(place: MyPlaces) {
         myPlacesList.add(place)
     }
+    var selected: MyPlaces? = null
 }

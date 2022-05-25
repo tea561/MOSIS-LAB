@@ -2,12 +2,15 @@ package elfak.mosis.myplaces
 
 import android.os.Bundle
 import android.view.*
+import android.widget.AdapterView
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import elfak.mosis.myplaces.data.MyPlaces
 import elfak.mosis.myplaces.databinding.FragmentListBinding
@@ -67,7 +70,13 @@ class ListFragment : Fragment() {
         listView = requireView().findViewById(R.id.my_places_list)
 
         listView.adapter = ArrayAdapter<MyPlaces>(view.context, android.R.layout.simple_list_item_1, myPlacesViewModel.myPlacesList)
-
+        listView.setOnItemClickListener(object: AdapterView.OnItemClickListener {
+            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                var myPlace:MyPlaces = p0?.adapter?.getItem(p2) as MyPlaces
+                myPlacesViewModel.selected = myPlace
+                view.findNavController().navigate(R.id.action_ListFragment_to_ViewFragment)
+            }
+        })
     }
 
     override fun onDestroyView() {
