@@ -58,7 +58,6 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentListBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -77,6 +76,35 @@ class ListFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_ListFragment_to_ViewFragment)
             }
         })
+
+        listView.setOnCreateContextMenuListener(object: View.OnCreateContextMenuListener {
+            override fun onCreateContextMenu(
+                menu: ContextMenu,
+                v: View?,
+                menuInfo: ContextMenu.ContextMenuInfo?
+            ) {
+                val info = menuInfo as AdapterView.AdapterContextMenuInfo
+                val myPlace: MyPlaces = myPlacesViewModel.myPlacesList[info.position]
+                menu.setHeaderTitle(myPlace.name)
+                menu.add(0, 1, 1, "View Place")
+                menu.add(0, 2, 2, "Edit Place")
+                menu.add(0, 3, 3, "Delete Place")
+            }
+        })
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+        if (item.itemId == 1) {
+            myPlacesViewModel.selected = myPlacesViewModel.myPlacesList[info.position]
+            this.findNavController().navigate(R.id.action_ListFragment_to_ViewFragment)
+        } else if (item.itemId == 2) {
+            myPlacesViewModel.selected = myPlacesViewModel.myPlacesList[info.position]
+            this.findNavController().navigate(R.id.action_ListFragment_to_EditFragment)
+        } else if (item.itemId == 3) {
+            Toast.makeText(this.context, "Delete Item", Toast.LENGTH_SHORT).show()
+        }
+        return super.onContextItemSelected(item)
     }
 
     override fun onDestroyView() {

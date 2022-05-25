@@ -4,7 +4,7 @@
     <!-- Strings used for fragments for navigation -->
     <string name="home_fragment_label">Home</string>
     <string name="list_fragment_label">My Places</string>
-    <string name="edit_fragment_label">Edit Place</string>
+    <string name="edit_fragment_label">Add Place</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -21,6 +21,7 @@
     <string name="editmyplace_add_label">Add</string>
     <string name="editmyplace_cancel_label">Cancel</string>
     <string name="editmyplace_name_label">Name</string>
+    <string name="editmyplace_save_label">Save</string>
     <string name="viewmyplace_finished_label">Close</string>
     <string name="view_fragment_label">View My Place</string>
 

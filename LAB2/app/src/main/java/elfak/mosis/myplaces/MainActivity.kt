@@ -31,9 +31,18 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        navController.addOnDestinationChangedListener{ controller, destination, arguments ->
+            if (destination.id == R.id.EditFragment || destination.id == R.id.ViewFragment)
+                binding.fab.hide()
+            else
+                binding.fab.show()
+        }
+
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            if (navController.currentDestination?.id == R.id.HomeFragment)
+                navController.navigate(R.id.action_HomeFragment_to_EditFragment)
+            else if (navController.currentDestination?.id == R.id.ListFragment)
+                navController.navigate(R.id.action_ListFragment_to_EditFragment)
         }
     }
 
