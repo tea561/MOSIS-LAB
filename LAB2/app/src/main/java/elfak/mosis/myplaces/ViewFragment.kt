@@ -26,7 +26,7 @@ class ViewFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
        _binding = FragmentViewBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,8 +37,8 @@ class ViewFragment : Fragment() {
         binding.viewmyplaceNameText.text = myPlacesViewModel.selected?.name
         binding.viewmyplaceDescText.text = myPlacesViewModel.selected?.description
         binding.viewmyplaceFinishedButton.setOnClickListener{
-            myPlacesViewModel.selected = null
-            findNavController().navigate(R.id.action_ViewFragment_to_ListFragment)
+            //myPlacesViewModel.selected = null
+            findNavController().popBackStack()
         }
     }
 
